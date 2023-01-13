@@ -4,7 +4,8 @@ from .models import *
 
 # Create your views here.
 def index(request):
-    return render(request, 'main/index.html')
+    page = Index.objects.all()[0]
+    return render(request, "main/index.html", context={'mainpage': page})
 
 
 def demand(request):
