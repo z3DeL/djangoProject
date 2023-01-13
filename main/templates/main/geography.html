@@ -1,1 +1,43 @@
 {% extends 'main/navigation.html' %}
+{% block content %}
+<div class="this-page">
+    <img src="{{ page.graph1 }}" alt="График 1">
+    <table>
+    <tr>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Город</th>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Зарплата</th>
+    </tr>
+        {% for elem in table_salary %}
+    <tr>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ elem.city }}</td>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ elem.salary }}</td>
+    </tr>
+        {% endfor %}
+
+</table>
+    <img src="{{ page.graph2 }}" alt="График 2">
+    <</table>
+    <table>
+    <tr>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Город</th>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Доля вакансий </th>
+    </tr>
+        {% for elem in table_count %}
+    <tr>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ elem.city }}</td>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ elem.perc }}</td>
+    </tr>
+        {% endfor %}
+
+</table>
+</div>
+
+{% endblock %}

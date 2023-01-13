@@ -2,13 +2,27 @@ from django.db import models
 
 
 class Index(models.Model):
-    title1 = models.CharField('Описание', max_length=1000, default='1214141')
+    title1 = models.CharField('Описание', max_length=1000, default=None)
     text1 = models.TextField('Текст1', default=None)
     title2 = models.CharField('Кто такой специалист', max_length=1000, default=None)
     text2 = models.TextField('Текст2', default=None)
     title3 = models.CharField('Обязанности', max_length=1000, default=None)
     text3 = models.TextField('Текст3', default=None)
-    image = models.CharField('Ссылка', max_length=1000, default = None)
+    image = models.CharField('Ссылка', max_length=1000, default=None)
+
+
+class Demand(models.Model):
+    graph1 = models.CharField('график 1', max_length=1000, default=None)
+    graph2 = models.CharField('график 2', max_length=1000, default=None)
+
+
+class Geography(models.Model):
+    graph1 = models.CharField('график 1', max_length=1000, default=None)
+    graph2 = models.CharField('график 2', max_length=1000, default=None)
+
+
+class Skills(models.Model):
+    image1 = models.CharField('график', max_length=1000, default=None)
 
 class TableSalary(models.Model):
     year = models.CharField('Год', max_length=4, default='')
@@ -45,7 +59,7 @@ class TableGeoV(models.Model):
 
 
 class TableSkills(models.Model):
-    year = models.CharField('Год',max_length=4, default='')
+    year = models.CharField('Год', max_length=4, default='')
     skills = models.TextField('Топ 10 навыков', default='')
 
     def __str__(self):

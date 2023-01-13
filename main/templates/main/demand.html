@@ -1,1 +1,48 @@
 {% extends 'main/navigation.html' %}
+{% block content %}
+<div class="this-page">
+    <img src="{{ page.graph1 }}" alt="График 1">
+    <table>
+    <tr>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Год</th>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Средняя зарплата в IT</th>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Средняя зарплата техподдержки</th>
+    </tr>
+        {% for el in table_salary %}
+    <tr>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ el.year }}</td>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ el.salary }}</td>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ el.salary_tech }}</td>
+    </tr>
+        {% endfor %}
+    </table>
+    <img src="{{ page.graph2 }}" alt="График 2">
+    <table>
+    <tr>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Год</th>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Количество вакансий</th>
+        <th style=" padding: 3px;
+    border: 1px solid black;">Количество вакансий техподдержки</th>
+    </tr>
+        {% for elem in table_count %}
+    <tr>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ elem.year }}</td>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ elem.count }}</td>
+        <td style=" padding: 3px;
+    border: 1px solid black;">{{ elem.count_tech }}</td>
+    </tr>
+        {% endfor %}
+</table>
+</div>
+
+{% endblock %}

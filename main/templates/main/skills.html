@@ -1,1 +1,23 @@
 {% extends 'main/navigation.html' %}
+{% block content %}
+<div class="this-page">
+    <img src="{{ page.graph1 }}" alt="График">
+    <table>
+    <tr>
+        <th style=" padding: 4px;
+    border: 1px solid black;">Год</th>
+        <th style=" padding: 4px;
+    border: 1px solid black;">Навыки</th>
+    </tr>
+       {% for elem in table %}
+    <tr>
+        <td style=" padding: 4px;
+    border: 1px solid black;">{{ elem.year }}</td>
+        <td style=" padding: 4px;
+    border: 1px solid black;">{{ elem.skills }}</td>
+    </tr>
+       {% endfor %}
+</table>
+</div>
+
+{% endblock %}
