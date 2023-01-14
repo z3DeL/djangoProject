@@ -1,7 +1,15 @@
-
+.table {
+   float: left;
+   border: 1px solid green;
+}
 header{
+position: abcolute;
    width:100%;
 }
 
 body{
-    background: url('https://www.pixel-creation.com/wp-content/uploads/white-gradient-background-c2b7e291a0-download-free-beautiful-wallpapers-for.jpg')}
+    background: url('https://www.pixel-creation.com/wp-content/uploads/white-gradient-background-c2b7e291a0-download-free-beautiful-wallpapers-for.jpg')
+}
+main{
+    border: 1px solid green;
+}

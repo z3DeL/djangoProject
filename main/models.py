@@ -24,7 +24,15 @@ class Geography(models.Model):
 
 
 class Skills(models.Model):
-    image1 = models.CharField('график', max_length=1000, default=None)
+    title1 = models.CharField('Описание', max_length=1000, default=None)
+    graph1 = models.CharField('график1', max_length=1000, default=None)
+    graph2 = models.CharField('график2', max_length=1000, default=None)
+    graph3 = models.CharField('график3', max_length=1000, default=None)
+    graph4 = models.CharField('график4', max_length=1000, default=None)
+    graph5 = models.CharField('график5', max_length=1000, default=None)
+    graph6 = models.CharField('график6', max_length=1000, default=None)
+    graph7 = models.CharField('график7', max_length=1000, default=None)
+    graph8 = models.CharField('график8', max_length=1000, default=None)
 
 class TableSalary(models.Model):
     year = models.CharField('Год', max_length=4, default='')
