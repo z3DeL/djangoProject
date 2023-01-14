@@ -18,8 +18,8 @@ def demand(request):
 def geography(request):
     table_salary = TableGeoS.objects.all()
     table_count = TableGeoV.objects.all()
-    page = Demand.objects.all()[0]
-    return render(request, 'main/geography.html', {'salary': table_salary, 'count': table_count, 'page': page})
+    page = Geography.objects.all()[0]
+    return render(request, 'main/geography.html', {'table_salary': table_salary, 'table_count': table_count, 'page': page})
 
 
 def last_vacancies(request):
@@ -29,6 +29,6 @@ def last_vacancies(request):
 def skills(request):
     table_skills = TableSkills.objects.all()
     page = Skills.objects.all()[0]
-    return render(request, 'main/skills.html', {'skills': table_skills,'page':page})
+    return render(request, 'main/skills.html', {'table_skills': table_skills,'page':page})
 
 

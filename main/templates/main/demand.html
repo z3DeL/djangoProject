@@ -1,8 +1,14 @@
 {% extends 'main/navigation.html' %}
 {% block content %}
 <div class="this-page">
-    <img src="{{ page.graph1 }}" alt="График 1">
-    <table>
+<div class="text1">
+    <h1>{{ page.title1 }}</h1>
+</div>
+   <p class="fig">
+       <img src="{{ page.graph1 }}" width="500" height="300" >
+    <img src="{{ page.graph2 }}"  width="500" height="300" >
+</p>
+     <table  style="float:left;margin:0%  2%  0% 14%" >
     <tr>
         <th style=" padding: 3px;
     border: 1px solid black;">Год</th>
@@ -22,8 +28,7 @@
     </tr>
         {% endfor %}
     </table>
-    <img src="{{ page.graph2 }}" alt="График 2">
-    <table>
+    <table >
     <tr>
         <th style=" padding: 3px;
     border: 1px solid black;">Год</th>

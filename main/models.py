@@ -12,11 +12,13 @@ class Index(models.Model):
 
 
 class Demand(models.Model):
+    title1 = models.CharField('Описание', max_length=1000, default=None, null=True)
     graph1 = models.CharField('график 1', max_length=1000, default=None)
     graph2 = models.CharField('график 2', max_length=1000, default=None)
 
 
 class Geography(models.Model):
+    title1 = models.CharField('Описание', max_length=1000, default=None, null=True)
     graph1 = models.CharField('график 1', max_length=1000, default=None)
     graph2 = models.CharField('график 2', max_length=1000, default=None)
 

@@ -12,12 +12,9 @@
     <link rel="stylesheet" href="{% static '/css/navigation.css' %}">
 
 <body>
-<header class="d-flex2 flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-        <span class="fs-4">Итоговый проект</span>
-      </a>
-      </ul>
+<header class="head">
+    <p><img src="static/img/pngwing.com (1).png" width="30" height="30" align="middle" />
+Все о техподдержке</p>
     </header>
 <div class="table" style="width: 280px;">
     <aside>
@@ -56,17 +53,14 @@
     </aside>
   </div>
 <main>
+
     {% block content %}
 
 {% endblock %}
 </main>
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-muted">© Щербаков Данил РИ-210940</p>
 
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-    </a>
-
+<footer >
+    <p >© Щербаков Данил РИ-210940</p>
   </footer>
 </body>
 </html>
